@@ -322,15 +322,16 @@ class SecurePhishingDetector:
         chrome_options.add_argument('--disable-features=VizDisplayCompositor')
         
         # # Suppress Chrome logs and error messages
-        # chrome_options.add_argument('--log-level=3')  # Suppress INFO, WARNING, ERROR
-        # chrome_options.add_argument('--silent')
+        chrome_options.add_argument('--log-level=3')  # Suppress INFO, WARNING, ERROR
+        chrome_options.add_argument('--silent')
         # chrome_options.add_argument('--disable-logging')
         # chrome_options.add_argument('--disable-gpu-logging')
         # chrome_options.add_argument('--disable-software-rasterizer')
         # chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
         # chrome_options.add_experimental_option('useAutomationExtension', False)
         
-
+        # chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+        # chrome_options.add_argument('--disable-extensions-http-throttling')
         
         driver = None
         try:
